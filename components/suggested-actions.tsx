@@ -7,9 +7,9 @@ import type { UseChatHelpers } from '@ai-sdk/react';
 import type { VisibilityType } from './visibility-selector';
 
 interface SuggestedActionsProps {
-  chatId: string;
-  append: UseChatHelpers['append'];
-  selectedVisibilityType: VisibilityType;
+  readonly chatId: string;
+  readonly append: UseChatHelpers['append'];
+  readonly selectedVisibilityType: VisibilityType;
 }
 
 function PureSuggestedActions({
@@ -19,24 +19,24 @@ function PureSuggestedActions({
 }: SuggestedActionsProps) {
   const suggestedActions = [
     {
-      title: "Создай дорожную карту",
-      label: "для изучения китайского языка с нуля до HSK 3",
-      action: "Создай дорожную карту для изучения китайского языка с нуля до HSK 3"
+      title: "Create a roadmap",
+      label: "to learn Chinese from scratch to HSK 3",
+      action: "Create a roadmap to learn Chinese from scratch to HSK 3"
     },
     {
-      title: "Составь недельный план",
-      label: "освоения корейского языка до уровня TOPIK 2",
-      action: "Составь недельный план освоения корейского языка до уровня TOPIK 2"
+      title: "Make a weekly plan",
+      label: "to master Korean to TOPIK 2 level",
+      action: "Make a weekly plan to master Korean to TOPIK 2 level"
     },
     {
-      title: "Какие ресурсы использовать",
-      label: "для подготовки к JLPT N4 по японскому языку?",
-      action: "Какие ресурсы посоветуешь для подготовки к JLPT N4 по японскому языку?"
+      title: "What resources to use",
+      label: "to prepare for JLPT N4 in Japanese?",
+      action: "What resources do you recommend for JLPT N4 preparation in Japanese?"
     },
     {
-      title: "Объясни грамматику",
-      label: "разницу между は (wa) и が (ga) в японском языке",
-      action: "Объясни разницу между частицами は (wa) и が (ga) в японском языке на примерах"
+      title: "Explain Japanese grammar",
+      label: "the difference between は (wa) and が (ga)",
+      action: "Explain the difference between particles は (wa) and が (ga)"
     }
   ];
 
