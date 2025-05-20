@@ -19,25 +19,25 @@ function PureSuggestedActions({
 }: SuggestedActionsProps) {
   const suggestedActions = [
     {
-      title: 'What are the advantages',
-      label: 'of using Next.js?',
-      action: 'What are the advantages of using Next.js?',
+      title: "Создай дорожную карту",
+      label: "для изучения китайского языка с нуля до HSK 3",
+      action: "Создай дорожную карту для изучения китайского языка с нуля до HSK 3"
     },
     {
-      title: 'Write code to',
-      label: `demonstrate djikstra's algorithm`,
-      action: `Write code to demonstrate djikstra's algorithm`,
+      title: "Составь недельный план",
+      label: "освоения корейского языка до уровня TOPIK 2",
+      action: "Составь недельный план освоения корейского языка до уровня TOPIK 2"
     },
     {
-      title: 'Help me write an essay',
-      label: `about silicon valley`,
-      action: `Help me write an essay about silicon valley`,
+      title: "Какие ресурсы использовать",
+      label: "для подготовки к JLPT N4 по японскому языку?",
+      action: "Какие ресурсы посоветуешь для подготовки к JLPT N4 по японскому языку?"
     },
     {
-      title: 'What is the weather',
-      label: 'in San Francisco?',
-      action: 'What is the weather in San Francisco?',
-    },
+      title: "Объясни грамматику",
+      label: "разницу между は (wa) и が (ga) в японском языке",
+      action: "Объясни разницу между частицами は (wa) и が (ga) в японском языке на примерах"
+    }
   ];
 
   return (
