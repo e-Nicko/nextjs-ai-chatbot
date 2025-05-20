@@ -79,6 +79,23 @@ export function Chat({
           type: 'error',
           description: error.message,
         });
+      } else if (error && typeof error === 'object' && 'message' in error && typeof error.message === 'string') {
+        const errorMessageContent = `An API error occurred: ${error.message}`;
+        append({
+          id: generateUUID(),
+          role: 'assistant',
+          content: errorMessageContent,
+          parts: [{ type: 'text', text: errorMessageContent }],
+        });
+        toast({
+          type: 'error',
+          description: `API Error: ${error.message}`,
+        });
+      } else {
+        toast({
+          type: 'error',
+          description: 'An unexpected error occurred. Please try again.',
+        });
       }
     },
   });

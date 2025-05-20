@@ -13,6 +13,8 @@ import { memo } from 'react';
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
 import { type VisibilityType, VisibilitySelector } from './visibility-selector';
 import type { Session } from 'next-auth';
+import { ThemeToggle } from './theme-toggle';
+import { GithubIcon } from 'lucide-react';
 
 function PureChatHeader({
   chatId,
@@ -70,6 +72,19 @@ function PureChatHeader({
           className="order-1 md:order-3"
         />
       )}
+      <div className="ml-auto flex items-center gap-1">
+        <ThemeToggle />
+        <Button
+          variant="outline"
+          size="icon"
+          className="h-fit p-2"
+          asChild
+        >
+          <Link href="https://github.com/e-Nicko/nextjs-ai-chatbot" target="_blank" aria-label="GitHub repository">
+            <GithubIcon className="h-5 w-5" />
+          </Link>
+        </Button>
+      </div>
     </header>
   );
 }
